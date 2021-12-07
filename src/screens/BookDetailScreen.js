@@ -2,9 +2,13 @@ import React from "react";
 import { StyleSheet, Text, View } from "react-native";
 
 const BookDetailScreen = (props) => {
+  const book = props.navigation.getParam("book");
+
   return (
     <View>
-      <Text>Book Detail Screen</Text>
+      <Text>
+        {book.title} - {book.author}
+      </Text>
     </View>
   );
 };

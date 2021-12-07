@@ -18,7 +18,9 @@ const BookList = (props) => {
         renderItem={({ item }) => {
           return (
             <TouchableOpacity
-              onPress={() => props.navigation.navigate("BookDetail")}
+              onPress={() => {
+                props.navigation.navigate("BookDetail", { book: item });
+              }}
             >
               <Text style={styles.textStyle}>{item.title}</Text>
             </TouchableOpacity>
