@@ -9,7 +9,7 @@ const BookList = (props) => {
       <FlatList
         data={books}
         renderItem={({ item }) => {
-          return <Text>{item.title}</Text>;
+          return <Text style={styles.textStyle}>{item.title}</Text>;
         }}
         keyExtractor={(book) => book.title}
       />
@@ -17,6 +17,10 @@ const BookList = (props) => {
   );
 };
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+  textStyle: {
+    marginVertical: 50,
+  },
+});
 
 export default BookList;
