@@ -1,10 +1,12 @@
 import React from "react";
-import { StyleSheet, View, Text } from "react-native";
+import { StyleSheet, View } from "react-native";
+
+import BookList from "../components/BookList";
 
 const BooksScreen = (props) => {
   return (
     <View>
-      <Text>BooksScreen</Text>
+      <BookList />
     </View>
   );
 };
